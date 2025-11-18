@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.proyectofinal2.viewcontroller.AulaViewController">
+    <VBox spacing="15.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <Label text="Gestión de Aulas" style="-fx-font-size: 20px;" />
+
+        <GridPane hgap="10" vgap="10">
+            <Label text="ID Aula:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="txtId" promptText="Ej: A1" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="txtNombre" promptText="Ej: Estudio Principal" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Capacidad:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="txtCapacidad" promptText="Capacidad máxima" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        </GridPane>
+
+        <HBox spacing="10.0" alignment="CENTER_LEFT">
+            <Button text="Crear Aula" onAction="#handleCrearAula" />
+            <Button text="Eliminar Seleccionada" onAction="#handleEliminarAula" style="-fx-background-color: #f44336; -fx-text-fill: white;" />
+        </HBox>
+
+        <TableView fx:id="tablaAulas" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="50" />
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="200" />
+                <TableColumn fx:id="colCapacidad" text="Capacidad" prefWidth="100" />
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

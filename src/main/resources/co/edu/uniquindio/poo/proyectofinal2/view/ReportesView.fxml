@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.proyectofinal2.viewcontroller.ReportesViewController">
+    <VBox spacing="20.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <Label text="Generación de Reportes" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <TitledPane text="Reporte General" collapsible="false">
+            <VBox spacing="10.0">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10" />
+                </padding>
+                <Label text="Genera un informe general de todos los datos del sistema (Profesores, Estudiantes, Cursos)." />
+                <Button text="Generar Reporte General" onAction="#handleGenerarReporteGeneral" style="-fx-background-color: #2196f3; -fx-text-fill: white;"/>
+            </VBox>
+        </TitledPane>
+
+        <TitledPane text="Reporte de Progreso de Curso" collapsible="false">
+            <VBox spacing="10.0">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10" />
+                </padding>
+                <Label text="Genera un reporte detallado para un curso específico, incluyendo una nota y comentarios." />
+
+                <GridPane hgap="10" vgap="10">
+                    <Label text="Curso:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <ComboBox fx:id="cmbCurso" prefWidth="250" promptText="Seleccione el Curso" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <Label text="Nota Final:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="txtNota" promptText="Ej: 4.5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label text="Comentarios:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <TextArea fx:id="txtComentario" prefHeight="80" promptText="Comentarios sobre el progreso del curso" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                </GridPane>
+
+                <Button text="Generar Reporte de Progreso" onAction="#handleGenerarReporteProgreso" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+            </VBox>
+        </TitledPane>
+
+    </VBox>
+</AnchorPane>

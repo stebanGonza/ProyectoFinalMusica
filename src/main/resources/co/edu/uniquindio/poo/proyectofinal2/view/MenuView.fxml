@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane fx:id="mainLayout" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.poo.proyectofinal2.viewcontroller.MenuViewController">
+
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Gestión">
+                    <items>
+                        <MenuItem text="Gestionar Profesores" onAction="#handleGestionProfesores"/>
+                        <MenuItem text="Gestionar Estudiantes" onAction="#handleGestionEstudiantes"/>
+                        <MenuItem text="Gestionar Cursos" onAction="#handleGestionCursos"/>
+                        <MenuItem text="Gestionar Aulas" onAction="#handleGestionAulas"/>
+                        <MenuItem text="Gestionar Clases" onAction="#handleGestionClases"/>
+                        <MenuItem text="Administrador Academico" onAction="#handleAdministrarAcademico"/>
+
+                    </items>
+                </Menu>
+
+                <Menu text="Reportes">
+                    <items>
+                        <MenuItem text="Generar Reportes" onAction="#handleGenerarReportes"/>
+                    </items>
+                </Menu>
+
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <StackPane>
+            <Label text="Bienvenido al Sistema de Gestión Académica" style="-fx-font-size: 24px;" />
+        </StackPane>
+    </center>
+</BorderPane>

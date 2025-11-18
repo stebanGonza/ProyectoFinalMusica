@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.poo.proyectofinal2.viewcontroller.AdministradorAcademicoViewController"
+            prefWidth="800" prefHeight="600">
+
+    <VBox spacing="15" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0"
+          AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0">
+
+        <Label text="Panel Administrador Académico" style="-fx-font-size: 20px;" />
+
+        <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+
+            <!-- Profesores -->
+            <Tab text="Profesores">
+                <VBox spacing="10">
+                    <TableView fx:id="tablaProfesores" prefHeight="200">
+                        <columns>
+                            <TableColumn fx:id="colNombreProfesor" text="Nombre" prefWidth="150"/>
+                            <TableColumn fx:id="colIdProfesor" text="Documento" prefWidth="100"/>
+                            <TableColumn fx:id="colCorreoProfesor" text="Correo" prefWidth="200"/>
+                        </columns>
+                    </TableView>
+
+                    <HBox spacing="5">
+                        <TextField fx:id="txtNombreProfesor" promptText="Nombre"/>
+                        <TextField fx:id="txtIdProfesor" promptText="Documento"/>
+                        <TextField fx:id="txtCorreoProfesor" promptText="Correo"/>
+                        <Button text="Agregar" onAction="#agregarProfesor"/>
+                    </HBox>
+                </VBox>
+            </Tab>
+
+            <!-- Estudiantes -->
+            <Tab text="Estudiantes">
+                <VBox spacing="10">
+                    <TableView fx:id="tablaEstudiantes" prefHeight="200">
+                        <columns>
+                            <TableColumn fx:id="colNombreEstudiante" text="Nombre" prefWidth="150"/>
+                            <TableColumn fx:id="colIdEstudiante" text="Documento" prefWidth="100"/>
+                            <TableColumn fx:id="colCorreoEstudiante" text="Correo" prefWidth="200"/>
+                        </columns>
+                    </TableView>
+
+                    <HBox spacing="5">
+                        <TextField fx:id="txtNombreEstudiante" promptText="Nombre"/>
+                        <TextField fx:id="txtIdEstudiante" promptText="Documento"/>
+                        <TextField fx:id="txtCorreoEstudiante" promptText="Correo"/>
+                        <Button text="Agregar" onAction="#agregarEstudiante"/>
+                    </HBox>
+                </VBox>
+            </Tab>
+
+            <!-- Cursos -->
+            <Tab text="Cursos">
+                <VBox spacing="10">
+                    <TableView fx:id="tablaCursos" prefHeight="200">
+                        <columns>
+                            <TableColumn fx:id="colNombreCurso" text="Nombre" prefWidth="150"/>
+                            <TableColumn fx:id="colCodigoCurso" text="Créditos" prefWidth="100"/>
+                        </columns>
+                    </TableView>
+
+                    <HBox spacing="5">
+                        <TextField fx:id="txtNombreCurso" promptText="Nombre del curso"/>
+                        <TextField fx:id="txtCreditosCurso" promptText="Créditos"/>
+                        <Button text="Agregar" onAction="#agregarCurso"/>
+                    </HBox>
+                </VBox>
+            </Tab>
+
+            <!-- Aulas -->
+            <Tab text="Aulas">
+                <VBox spacing="10">
+                    <TableView fx:id="tablaAulas" prefHeight="200">
+                        <columns>
+                            <TableColumn fx:id="colCodigoAula" text="Código" prefWidth="100"/>
+                            <TableColumn fx:id="colCapacidadAula" text="Capacidad" prefWidth="100"/>
+                        </columns>
+                    </TableView>
+
+                    <HBox spacing="5">
+                        <TextField fx:id="txtCodigoAula" promptText="Código"/>
+                        <TextField fx:id="txtNombreAula" promptText="Nombre"/>
+                        <TextField fx:id="txtUbicacionAula" promptText="Ubicación"/>
+                        <TextField fx:id="txtCapacidadAula" promptText="Capacidad"/>
+                        <Button text="Agregar" onAction="#agregarAula"/>
+                    </HBox>
+                </VBox>
+            </Tab>
+
+        </TabPane>
+
+    </VBox>
+</AnchorPane>
